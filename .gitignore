@@ -1,0 +1,8 @@
+*.env
+.vscode
+
+coverage/
+lib/
+log/
+node_modules/
+temp/
