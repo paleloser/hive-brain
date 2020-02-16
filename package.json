@@ -1,0 +1,15 @@
+{
+  "name": "hive-brain",
+  "version": "0.1.0-SNAPSHOT",
+  "description": "The brain for HIVE project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Caraballo Llorente <pablo.caraballorente@gmail.com>",
+  "license": "ISC"
+}
