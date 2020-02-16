@@ -25,7 +25,7 @@
   },
   "config": {
     "commit-message-validator": {
-      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([a-z ]+\\))?: [\\w ]+$",
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([a-z ]+\\))?: .+$",
       "errorMessage": "Commit doesn't match required pattern, like: feat: this is the commit"
     }
   },
