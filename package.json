@@ -8,8 +8,39 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf -rf coverage/",
+    "debug": "nodemon index.js",
+    "lint": "eslint -c .eslintrc.yml src/",
+    "lint:fix": "eslint -c .eslintrc.yml src/ --fix",
+    "start": "node index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commit-message-validator",
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "config": {
+    "commit-message-validator": {
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([a-z ]+\\))?: [\\w ]+$",
+      "errorMessage": "Commit doesn't match required pattern, like: feat: this is the commit"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "npm run lint:fix"
   },
   "author": "Pablo Caraballo Llorente <pablo.caraballorente@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": ">=12.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7"
+  }
 }
